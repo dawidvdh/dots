@@ -1,3 +1,4 @@
+source ~/.zsnap/zsh-snap/znap.zsh
 # history
 SAVEHIST=100000
 
@@ -6,7 +7,6 @@ bindkey -v
 
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
-source ~/code/zsh-snap/znap.zsh
 
 PURE_GIT_UNTRACKED_DIRTY=0
 
