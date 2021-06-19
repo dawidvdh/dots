@@ -10,7 +10,7 @@ window:
 
   # Startup Mode (changes require restart)
   startup_mode: Windowed
-  decorations: buttonless
+  decorations: none
   dimensions:
     columns: 180
     lines: 15
@@ -131,7 +131,7 @@ colors:
     magenta: '#ff6ac1'
     cyan:    '#9aedfe'
     white:   '#eff0eb'
-    
+
 shell:
   program: /opt/homebrew/bin/zsh
   args:
