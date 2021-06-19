@@ -74,7 +74,6 @@ brew install --cask firefox
 # less often
 brew install --cask transmission
 brew install --cask dropbox
-brew install --cask gpgtools
 
 # Remove outdated versions from the cellar.
 brew cleanup
