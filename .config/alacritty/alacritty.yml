@@ -12,7 +12,7 @@ window:
   startup_mode: Windowed
   decorations: none
   dimensions:
-    columns: 180
+    columns: 151
     lines: 15
 
   position:

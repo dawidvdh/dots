@@ -14,6 +14,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # Additional taps
 brew tap homebrew/cask-fonts
+brew tap homebrew/cask-versions
 
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -53,7 +54,7 @@ brew install cmake
 brew install go
 brew install automake
 brew install hammerspoon
-
+brew install tmux
 brew install scrcpy # control/view android phone from PC. amazing
 
 # Casks
@@ -69,6 +70,7 @@ brew install --cask imageoptim
 brew install --cask adoptopenjdk8
 brew install --cask android-studio
 brew install --cask flipper
+brew install --cask insomnia
 
 # fonts
 brew install --cask font-menlo-for-powerline
