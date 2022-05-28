@@ -20,7 +20,7 @@ znap source zsh-users/zsh-history-substring-search
 ZSH_HIGHLIGHT_HIGHLIGHTERS=( main brackets )
 znap source zsh-users/zsh-syntax-highlighting
 
-
+eval "$(rbenv init - zsh)"
 eval "$(zoxide init zsh)"
 
 # history mgmt
@@ -30,6 +30,9 @@ setopt share_history
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+# VI mode
+bindkey -v
 
 for file in ~/.{path,exports,aliases,functions}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
