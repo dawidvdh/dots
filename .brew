@@ -83,19 +83,16 @@ brew install --cask android-studio
 brew install --cask flipper
 brew install --cask insomnia
 
-# fonts
-brew install --cask font-menlo-for-powerline
-
 # browser
 brew install --cask google-chrome-canary
 brew install --cask firefox
 
 # less often
-brew install --cask transmission
+# brew install --cask transmission
 brew install --cask dropbox
 
 # Fonts
-
+brew install --cask font-menlo-for-powerline
 brew install font-source-code-pro-for-powerline
 
 # Remove outdated versions from the cellar.
