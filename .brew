@@ -74,7 +74,7 @@ brew install --cask 1password
 brew install --cask rectangle
 
 # Dev
-brew install --cask adoptopenjdk/openjdk/adoptopenjdk11
+brew install --cask zulu11
 brew install --cask visual-studio-code-insiders
 brew install --cask alacritty
 brew install --cask imageoptim
