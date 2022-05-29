@@ -20,6 +20,7 @@ znap source zsh-users/zsh-history-substring-search
 ZSH_HIGHLIGHT_HIGHLIGHTERS=( main brackets )
 znap source zsh-users/zsh-syntax-highlighting
 
+eval "$(pyenv init -)"
 eval "$(rbenv init - zsh)"
 eval "$(zoxide init zsh)"
 
