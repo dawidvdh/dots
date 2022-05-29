@@ -41,12 +41,10 @@ brew install openssh
 # folder jumping
 brew install zoxide
 
-# Ruby Version Management
-brew install rbenv
-brew install ruby-build
-
-# Python Version Management
+# Version Managers
+brew install rbenv ruby-build
 brew install pyenv
+brew install fnm # perhaps also use nodenv?
 
 # Install other useful binaries.
 brew install ack

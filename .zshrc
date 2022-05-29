@@ -22,6 +22,7 @@ znap source zsh-users/zsh-syntax-highlighting
 
 eval "$(pyenv init -)"
 eval "$(rbenv init - zsh)"
+eval "$(fnm env --use-on-cd)"
 eval "$(zoxide init zsh)"
 
 # history mgmt
