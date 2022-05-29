@@ -41,6 +41,13 @@ brew install openssh
 # folder jumping
 brew install zoxide
 
+# Ruby Version Management
+brew install rbenv
+brew install ruby-build
+
+# Python Version Management
+brew install pyenv
+
 # Install other useful binaries.
 brew install ack
 brew install git
