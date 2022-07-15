@@ -7,18 +7,17 @@ bindkey -v
 
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
-
 PURE_GIT_UNTRACKED_DIRTY=0
 
 znap prompt sindresorhus/pure
 
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
+ZSH_HIGHLIGHT_HIGHLIGHTERS=( main brackets )
+
+znap source zsh-users/zsh-syntax-highlighting
 znap source zsh-users/zsh-autosuggestions
 znap source zsh-users/zsh-history-substring-search
-
-ZSH_HIGHLIGHT_HIGHLIGHTERS=( main brackets )
-znap source zsh-users/zsh-syntax-highlighting
 
 eval "$(pyenv init -)"
 eval "$(rbenv init - zsh)"
