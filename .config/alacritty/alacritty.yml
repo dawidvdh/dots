@@ -72,7 +72,7 @@ font:
     y: 7
 
   # Better font rendering for mac
-  use_thin_strokes: true
+  AppleFontSmoothing: true
 
 # background_opacity: 0.99
 
