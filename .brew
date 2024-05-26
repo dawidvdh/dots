@@ -62,7 +62,6 @@ brew install automake
 brew install hammerspoon
 brew install tmux
 brew install scrcpy # control/view android phone
-brew install idb-companion # control/record ios phone
 brew install svn # for brew fonts
 
 # Casks
@@ -73,21 +72,19 @@ brew install --cask rectangle
 
 # Dev
 brew install --cask zulu11
-brew install --cask visual-studio-code-insiders
+brew install --cask visual-studio-code@insiders
 brew install --cask alacritty
 brew install --cask imageoptim
-brew install --cask adoptopenjdk8
 brew install --cask android-studio
-brew install --cask flipper
-brew install --cask insomnia
+brew install --cask bruno
 
 # browser
 brew install --cask google-chrome-canary
-brew install --cask firefox
+brew install --cask brave-browser
 
 # less often
 # brew install --cask transmission
-brew install --cask dropbox
+# brew install --cask dropbox
 
 # Fonts
 brew install --cask font-menlo-for-powerline
