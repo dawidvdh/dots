@@ -63,12 +63,16 @@ brew install hammerspoon
 brew install tmux
 brew install scrcpy # control/view android phone
 brew install svn # for brew fonts
+brew install gpg
 
 # Casks
 
 # Daily
 brew install --cask 1password
+brew install --cask 1password-cli
 brew install --cask rectangle
+brew install --cask keepingyouawake
+brew install --cask slack
 
 # Dev
 brew install --cask zulu11

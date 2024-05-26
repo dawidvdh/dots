@@ -21,7 +21,11 @@ sudo pmset -a standbydelay 86400
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
-# Disable transparency in the menu bar and elsewhere on Yosemite
+# hide the spotlight icon from the menu bar
+defaults -currentHost write com.apple.Spotlight MenuItemHidden -int 1
+
+# Disable single click to show desktop
+defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -int 0
 
 # Set sidebar icon size to medium
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
