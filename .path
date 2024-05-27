@@ -1,5 +1,6 @@
- export ANDROID_HOME=$HOME/Library/Android/sdk
+export ANDROID_HOME=$HOME/Library/Android/sdk
 export PYENV_ROOT="$HOME/.pyenv"
+export RUBY_ROOT="$HOME/.rbenv"
 
 PATH="$HOME/bin:$PATH"
 
@@ -8,6 +9,6 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-export PATH="$HOME/.rbenv/shims:$PATH"
+export PATH="$RUBY_ROOT/shims:$PATH"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
