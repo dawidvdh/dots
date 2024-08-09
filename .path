@@ -1,6 +1,7 @@
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PYENV_ROOT="$HOME/.pyenv"
 export RUBY_ROOT="$HOME/.rbenv"
+export REACT_EDITOR="code"
 
 PATH="$HOME/bin:$PATH"
 

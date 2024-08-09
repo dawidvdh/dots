@@ -1,4 +1,6 @@
+source ~/.config/op/plugins.sh
 source ~/.zsnap/znap.zsh
+
 # history
 SAVEHIST=100000
 
