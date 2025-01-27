@@ -1,0 +1,9 @@
+macos-non-native-fullscreen = false
+keybind = global:alt+space=toggle_quick_terminal
+quick-terminal-autohide = false
+quick-terminal-animation-duration = 0
+initial-window = false
+font-family = "Source Code Pro for Powerline"
+font-size = 16
+initial-command = "/opt/homebrew/bin/tmux"
+theme = "snazzy"
