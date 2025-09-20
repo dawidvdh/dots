@@ -15,7 +15,6 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # Additional taps
 brew tap homebrew/cask-fonts
 brew tap homebrew/cask-versions
-brew tap facebook/fb
 
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -41,10 +40,11 @@ brew install openssh
 # folder jumping
 brew install zoxide
 
-# Version Managers
-brew install rbenv ruby-build
-brew install pyenv
-brew install fnm # perhaps also use nodenv?
+# Version Manager
+brew install mise
+
+# Backups
+brew install filen-cli 
 
 # Install other useful binaries.
 brew install ack
@@ -69,20 +69,19 @@ brew install gpg
 # Daily
 brew install --cask 1password
 brew install --cask 1password-cli
-brew install --cask rectangle
 brew install --cask keepingyouawake
 brew install --cask slack
-
+brew install --cask nikitabobko/tap/aerospace
+brew install --cask proton-mail
 # Dev
 brew install --cask zulu@17
-brew install --cask visual-studio-code@insiders
 brew install --cask ghostty
 brew install --cask imageoptim
 brew install --cask android-studio
 brew install --cask bruno
 
 # browser
-brew install --cask google-chrome-canary
+brew install --cask google-chrome
 brew install --cask brave-browser
 
 # less often

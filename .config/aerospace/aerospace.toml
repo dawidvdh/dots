@@ -1,0 +1,305 @@
+# Complete AeroSpace Configuration
+# Place this file at ~/.config/aerospace/aerospace.toml
+# This replaces yabai + skhd + jankyborders with a single tool
+
+# Start AeroSpace at login
+start-at-login = true
+
+# After startup commands - Launch JankyBorders automatically
+after-startup-command = [
+    # JankyBorders has built-in detection of already running process,
+    # so it won't be run twice on AeroSpace restart
+    # 'exec-and-forget borders style=round width=2.0 hidpi=off active_color=0xc0e2e2e3 inactive_color=0xc02c2e34 background_color=0x302c2e34 blur_radius=25
+  'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0'
+
+]
+
+# Normalizations (similar to yabai's window behavior)
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+# Layout Settings (from yabai config)
+# Use 'auto' for intelligent placement like yabai's second_child
+default-root-container-layout = 'tiles'
+default-root-container-orientation = 'auto'  # This makes AeroSpace decide intelligently!
+
+# Window placement behavior
+on-focus-changed = []
+on-focused-monitor-changed = []
+
+# ============================================
+# Gaps Configuration (from yabai config)
+# ============================================
+[gaps]
+inner.horizontal = 8
+inner.vertical = 8
+outer.left = 8
+outer.bottom = 8
+outer.top = 8
+outer.right = 8
+
+# ============================================
+# Main Keybindings (from skhd config)
+# ============================================
+[mode.main.binding]
+
+# ---------------------------------------------
+# Navigation (lalt - ...)
+# ---------------------------------------------
+# Workspace Navigation (1-4 per display concept)
+alt-1 = 'workspace 1'
+alt-2 = 'workspace 2'
+alt-3 = 'workspace 3'
+alt-4 = 'workspace 4'
+alt-5 = 'workspace 5'
+alt-6 = 'workspace 6'
+alt-7 = 'workspace 7'
+alt-8 = 'workspace 8'
+alt-9 = 'workspace 9'
+
+# Window Navigation (with display border crossing)
+alt-h = 'focus left'
+alt-j = 'focus down'
+alt-k = 'focus up'
+alt-l = 'focus right'
+
+# Float / Unfloat window
+alt-space = 'layout floating tiling'
+
+# Fullscreen
+alt-shift-f = 'fullscreen'
+
+# Zoom to parent (closest equivalent)
+alt-f = 'layout tiles'
+
+# ---------------------------------------------
+# Window Movement (shift + lalt - ...)
+# ---------------------------------------------
+# Moving windows in spaces
+alt-shift-h = 'move left'
+alt-shift-j = 'move down'
+alt-shift-k = 'move up'
+alt-shift-l = 'move right'
+
+# Toggle split orientation (using join-with as recommended)
+alt-shift-s = 'join-with up'
+
+# Moving windows between workspaces
+alt-shift-1 = 'move-node-to-workspace 1'
+alt-shift-2 = 'move-node-to-workspace 2'
+alt-shift-3 = 'move-node-to-workspace 3'
+alt-shift-4 = 'move-node-to-workspace 4'
+alt-shift-5 = 'move-node-to-workspace 5'
+alt-shift-6 = 'move-node-to-workspace 6'
+alt-shift-7 = 'move-node-to-workspace 7'
+alt-shift-8 = 'move-node-to-workspace 8'
+alt-shift-9 = 'move-node-to-workspace 9'
+
+# Move to prev/next workspace and follow focus
+alt-shift-p = ['move-node-to-workspace prev', 'workspace prev']
+alt-shift-n = ['move-node-to-workspace next', 'workspace next']
+
+# Mirror Space on X and Y Axis (layout cycling)
+alt-shift-x = 'layout tiles horizontal vertical'
+alt-shift-y = 'layout tiles vertical horizontal'
+
+# ---------------------------------------------
+# Stacks (shift + ctrl - ...)
+# ---------------------------------------------
+# Add window to stack in direction (using join-with)
+shift-ctrl-h = 'join-with left'
+shift-ctrl-j = 'join-with down'
+shift-ctrl-k = 'join-with up'
+shift-ctrl-l = 'join-with right'
+
+# Stack Navigation (DFS traversal)
+shift-ctrl-n = 'focus dfs-next'
+shift-ctrl-p = 'focus dfs-prev'
+
+# ---------------------------------------------
+# Resize (ctrl + lalt - ...)
+# ---------------------------------------------
+ctrl-alt-h = 'resize width -100'
+ctrl-alt-j = 'resize height +100'
+ctrl-alt-k = 'resize height -100'
+ctrl-alt-l = 'resize width +100'
+
+# Equalize size of windows
+ctrl-alt-e = 'balance-sizes'
+
+# Toggle gaps in current workspace (switch to no-gaps mode)
+ctrl-alt-g = 'mode no-gaps'
+
+# ---------------------------------------------
+# Insertion (shift + ctrl + lalt - ...)
+# ---------------------------------------------
+# Using join-with instead of split (as recommended with normalizations)
+shift-ctrl-alt-h = 'join-with left'
+shift-ctrl-alt-j = 'join-with down'
+shift-ctrl-alt-k = 'join-with up'
+shift-ctrl-alt-l = 'join-with right'
+shift-ctrl-alt-s = 'layout h_accordion'
+
+# New window in splits with Cmd+N
+alt-s = 'exec-and-forget osascript -e "tell application \"System Events\" to keystroke \"n\" using command down"'
+alt-v = 'exec-and-forget osascript -e "tell application \"System Events\" to keystroke \"n\" using command down"'
+
+# ---------------------------------------------
+# Application Launching
+# ---------------------------------------------
+# Ghostty - Opens a new window properly
+alt-enter = 'exec-and-forget ~/.config/aerospace/new_ghostty.sh'
+
+# Open Browser
+alt-b = 'exec-and-forget open "http://"'
+
+# Open Finder
+alt-m = 'exec-and-forget open -a Finder'
+
+# Ghostty with btop - Opens new instance with btop
+# Note: If Ghostty doesn't support scripting commands, use the -n flag
+alt-t = 'exec-and-forget open -na Ghostty --args -e btop'
+
+# Proton Mail
+alt-e = 'exec-and-forget open -a "Proton Mail"'
+
+alt-shift-m = ['exec-and-forget open -a Finder', 'join-with down']
+
+# ---------------------------------------------
+# Additional Bindings
+# ---------------------------------------------
+# Reload config
+alt-shift-r = 'reload-config'
+
+# Focus monitor
+ctrl-alt-1 = 'focus-monitor 1'
+ctrl-alt-2 = 'focus-monitor 2'
+ctrl-alt-3 = 'focus-monitor 3'
+
+# Move to monitor
+ctrl-shift-1 = 'move-node-to-monitor 1'
+ctrl-shift-2 = 'move-node-to-monitor 2'
+ctrl-shift-3 = 'move-node-to-monitor 3'
+
+# Move to monitor and follow focus
+ctrl-shift-alt-1 = ['move-node-to-monitor 1', 'focus-monitor 1']
+ctrl-shift-alt-2 = ['move-node-to-monitor 2', 'focus-monitor 2']
+ctrl-shift-alt-3 = ['move-node-to-monitor 3', 'focus-monitor 3']
+
+# ============================================
+# No-Gaps Mode (for gap toggling)
+# ============================================
+[mode.no-gaps.binding]
+# Toggle back to main mode
+ctrl-alt-g = 'mode main'
+# Essential navigation in no-gaps mode
+alt-h = 'focus left'
+alt-j = 'focus down'
+alt-k = 'focus up'
+alt-l = 'focus right'
+alt-shift-h = 'move left'
+alt-shift-j = 'move down'
+alt-shift-k = 'move up'
+alt-shift-l = 'move right'
+esc = 'mode main'
+
+# ============================================
+# Workspace-to-Monitor Force Assignment
+# ============================================
+# Assigns specific workspaces to specific monitors
+[workspace-to-monitor-force-assignment]
+1 = 1  # Workspace 1 to Monitor 1
+2 = 1  # Workspace 2 to Monitor 1
+3 = 1  # Workspace 3 to Monitor 1
+4 = 1  # Workspace 4 to Monitor 1
+5 = 2  # Workspace 5 to Monitor 2
+6 = 2  # Workspace 6 to Monitor 2
+7 = 2  # Workspace 7 to Monitor 2
+8 = 2  # Workspace 8 to Monitor 2
+
+# ============================================
+# Window Detection Rules (from yabai exclusions)
+# ============================================
+# Apps that should float instead of tile
+
+[[on-window-detected]]
+if.app-id = 'com.objective-see.lulu.app'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.calculator'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.SoftwareUpdate'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Dictionary'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'org.videolan.vlc'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.systempreferences'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.SystemProfiler'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'us.zoom.xos'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.PhotoBooth'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.archiveutility'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'org.python.python'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'org.libreoffice.script'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.AppStore'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.valvesoftware.steam'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.runningwithcrayons.Alfred'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.ActivityMonitor'
+run = 'layout floating'
+
+# Finder dialog windows (Copy, Move, Info, etc.)
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+if.window-title-regex-substring = '(Copy|Connect|Move|Info|Pref)'
+run = 'layout floating'
+
+# Safari preference windows
+[[on-window-detected]]
+if.app-id = 'com.apple.Safari'
+if.window-title-regex-substring = '(General|Tab|Password|Website|Extension|AutoFill|Search|Security|Privacy|Advance)'
+run = 'layout floating'
+
+# System Information "About This Mac" window
+[[on-window-detected]]
+if.app-id = 'com.apple.SystemProfiler'
+if.window-title-regex-substring = 'About This Mac'
+run = 'layout floating'

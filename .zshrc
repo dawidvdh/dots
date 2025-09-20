@@ -21,10 +21,8 @@ znap source zsh-users/zsh-syntax-highlighting
 znap source zsh-users/zsh-autosuggestions
 znap source zsh-users/zsh-history-substring-search
 
-eval "$(pyenv init -)"
-eval "$(rbenv init - zsh)"
-eval "$(fnm env --use-on-cd)"
 eval "$(zoxide init zsh)"
+eval "$(mise activate zsh)"
 
 # history mgmt
 # http://www.refining-linux.org/archives/49/ZSH-Gem-15-Shared-history/
@@ -41,3 +39,7 @@ for file in ~/.{path,exports,aliases,functions}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 	done;
 unset file;
+
+
+# filen-cli
+PATH=$PATH:~/.filen-cli/bin

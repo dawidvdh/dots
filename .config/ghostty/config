@@ -7,3 +7,4 @@ font-family = "Source Code Pro for Powerline"
 font-size = 16
 initial-command = "/opt/homebrew/bin/tmux"
 theme = "snazzy"
+keybind = shift+enter=text:\x1b\r
