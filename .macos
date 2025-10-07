@@ -607,29 +607,6 @@ defaults write org.m0k.transmission WarningDonate -bool false
 defaults write org.m0k.transmission WarningLegal -bool false
 
 ###############################################################################
-# Rectangle.app                                                               #
-###############################################################################
-
-# Same cycle behaviour as spectacle
-defaults write com.knollsoft.Rectangle subsequentExecutionMode -int 2
-
-# remove shortcuts to avoidf key collision
-defaults write com.knollsoft.Rectangle bottomLeft nil
-defaults write com.knollsoft.Rectangle bottomRight nil
-
-# Set preferred shortcuts
-defaults write com.knollsoft.Rectangle leftHalf -dict-add keyCode -float 4 modifierFlags -float 786432
-defaults write com.knollsoft.Rectangle rightHalf -dict-add keyCode -float 37 modifierFlags -float 786432
-defaults write com.knollsoft.Rectangle topHalf -dict-add keyCode -float 38 modifierFlags -float 786432
-defaults write com.knollsoft.Rectangle bottomHalf -dict-add keyCode -float 40 modifierFlags -float 786432
-
-# Launch on Login
-defaults write com.knollsoft.Rectangle launchOnLogin -bool true
-
-# Hide menu bar icon
-defaults write com.knollsoft.Rectangle hideMenubarIcon -bool true
-
-###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 

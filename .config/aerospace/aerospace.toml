@@ -7,11 +7,7 @@ start-at-login = true
 
 # After startup commands - Launch JankyBorders automatically
 after-startup-command = [
-    # JankyBorders has built-in detection of already running process,
-    # so it won't be run twice on AeroSpace restart
-    # 'exec-and-forget borders style=round width=2.0 hidpi=off active_color=0xc0e2e2e3 inactive_color=0xc02c2e34 background_color=0x302c2e34 blur_radius=25
-  'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0'
-
+  'exec-and-forget borders active_color=0xff347799 inactive_color=0xff282a36 width=3.0 style=round order=above'
 ]
 
 # Normalizations (similar to yabai's window behavior)
@@ -148,7 +144,7 @@ alt-v = 'exec-and-forget osascript -e "tell application \"System Events\" to key
 # Application Launching
 # ---------------------------------------------
 # Ghostty - Opens a new window properly
-alt-enter = 'exec-and-forget ~/.config/aerospace/new_ghostty.sh'
+alt-enter = 'exec-and-forget /Applications/kitty.app/Contents/MacOS/kitty --single-instance'
 
 # Open Browser
 alt-b = 'exec-and-forget open "http://"'
@@ -156,9 +152,8 @@ alt-b = 'exec-and-forget open "http://"'
 # Open Finder
 alt-m = 'exec-and-forget open -a Finder'
 
-# Ghostty with btop - Opens new instance with btop
-# Note: If Ghostty doesn't support scripting commands, use the -n flag
-alt-t = 'exec-and-forget open -na Ghostty --args -e btop'
+# Btop
+alt-t = 'exec-and-forget /Applications/kitty.app/Contents/MacOS/kitty --single-instance btop'
 
 # Proton Mail
 alt-e = 'exec-and-forget open -a "Proton Mail"'
@@ -303,3 +298,11 @@ run = 'layout floating'
 if.app-id = 'com.apple.SystemProfiler'
 if.window-title-regex-substring = 'About This Mac'
 run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.daisydiskapp.DaisyDisk'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'net.kovidgoyal.kitty'
+run = 'layout tiling'

@@ -59,7 +59,6 @@ brew install rust
 brew install cmake
 brew install go
 brew install automake
-brew install tmux
 brew install scrcpy # control/view android phone
 brew install svn # for brew fonts
 brew install gpg
@@ -75,7 +74,7 @@ brew install --cask nikitabobko/tap/aerospace
 brew install --cask proton-mail
 # Dev
 brew install --cask zulu@17
-brew install --cask ghostty
+brew install --cask kitty
 brew install --cask imageoptim
 brew install --cask android-studio
 brew install --cask bruno
